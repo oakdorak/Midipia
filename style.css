@@ -1,39 +1,67 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+/* Updated style.css with mobile responsiveness, GPU acceleration, accessibility improvements, enhanced visual feedback, animations, and responsive breakpoints for tablets and phones */
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  .header {
-    flex-direction: column;
-  }
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        padding: 20px;
+    }
 }
 
-/* GPU Acceleration */
+/* GPU acceleration for animations */
 .element {
-  will-change: transform, opacity;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform, opacity;
 }
 
-/* Accessibility Improvements */
+/* Accessibility improvements */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+a:focus,
+a:hover {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+/* Enhanced visual feedback */
 .button {
-  background-color: #0056b3;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
 }
-.button:focus, .button:hover {
-  outline: none;
-  box-shadow: 0 0 5px #0056b3;
+.button:hover {
+    background-color: #0c5bce;
 }
 
-/* Enhanced Visual Feedback */
-.button:active {
-  transform: scale(0.98);
-  transition: transform 0.1s;
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.element-animated {
+    animation: fade-in 1s forwards;
+}
+
+/* Responsive breakpoints */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
