@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midipia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" integrity="sha384-abc123" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Welcome to Midipia</h1>
+    <button id="volume-up" aria-label="Increase volume">Volume Up</button>
+    <button id="volume-down" aria-label="Decrease volume">Volume Down</button>
+    <button id="pause" aria-label="Pause">Pause</button>
+    <div id="high-score" aria-live="polite">High Score: 0</div>
+    <script>
+        let highScore = 0;
+        function updateHighScore(newScore) {
+            if (newScore > highScore) {
+                highScore = newScore;
+                document.getElementById('high-score').innerText = 'High Score: ' + highScore;
+            }
+        }
+        // Add volume and pause functionality here...
+    </script>
+</body>
+</html>
