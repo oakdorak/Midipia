@@ -1,0 +1,39 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .header {
+    flex-direction: column;
+  }
+}
+
+/* GPU Acceleration */
+.element {
+  will-change: transform, opacity;
+}
+
+/* Accessibility Improvements */
+.button {
+  background-color: #0056b3;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.button:focus, .button:hover {
+  outline: none;
+  box-shadow: 0 0 5px #0056b3;
+}
+
+/* Enhanced Visual Feedback */
+.button:active {
+  transform: scale(0.98);
+  transition: transform 0.1s;
+}
